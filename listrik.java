@@ -28,10 +28,11 @@ public class listrik {
         System.out.println("===================PLN Java===================");
         System.out.println("Nama          : " + namaOrang);
         System.out.println("Kelurahan     : " + namaKelurahan);
-        System.out.println("Pemakaian bulan ini : " + (akhirKwh - awalKwh));
-        System.out.println("Tarif listrik : " + (akhirKwh - awalKwh) * biayaBeban);
-        System.out.println("PPJ 10%       : " + (biayaBeban * PPJ * 10));
-        System.out.println("Total bayar   : " + ((akhirKwh - awalKwh) * (biayaBeban) + (biayaBeban * PPJ * 10)));
+        System.out.println("Pemakaian bulan ini : " + (akhirKwh - awalKwh) + " Kwh Meter");
+        System.out.println("Tarif listrik : Rp " + (akhirKwh - awalKwh) * biayaBeban + ",-");
+        System.out.println("PPJ 10%       : Rp " + (biayaBeban * PPJ * 10) + ",-");
+        System.out.println(
+                "Total bayar   : Rp " + ((akhirKwh - awalKwh) * (biayaBeban) + (biayaBeban * PPJ * 10)) + ",-");
         System.out.println("==============================================");
 
     }
