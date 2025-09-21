@@ -16,13 +16,19 @@ public class Loopers {
          * input.close();
          */
 
-        int hitung = input.nextInt();
+        /*
+         * while (hitung <= 3) {
+         * System.out.println(hitung);
+         * hitung++;
+         * }
+         * System.out.println("Selamat");
+         */
 
-        while (hitung <= 3) {
-            System.out.println(hitung);
-            hitung++;
+        System.out.print("i = ");
+        for (int i = input.nextInt(); i > 50; i -= 6) {
+            System.out.println(i);
+
         }
-        System.out.println("Selamat");
 
         input.close();
 
