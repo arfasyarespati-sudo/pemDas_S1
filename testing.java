@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class testing { // public class = dapat diakses kelas lain bersifat public
 
-    public static void main(String[] args) { // static = dipanggil tanpa membuat objek, void tidak mengembalikan nilai
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        // static = dipanggil tanpa membuat objek, void tidak mengembalikan nilai
         System.out.println("Selamat pagi"); // output pertama print line
         System.out.println("Semuanya"); // output kedua print biasa
 
@@ -30,6 +34,13 @@ public class testing { // public class = dapat diakses kelas lain bersifat publi
         System.out.println("Student fee  : " + studentFee);
         System.out.println("Student grade: " + studentGrade);
 
+        int i = 11;
+        while (i <= 188) {
+            if (i % 2 != 0) {
+                System.out.println(i);
+            }
+            i++;
+        }
     }
 
 }
