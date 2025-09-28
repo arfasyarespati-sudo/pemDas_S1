@@ -1,0 +1,6 @@
+{
+  "excludeFiles": [
+    "**/*",
+    "!testing.java"
+  ]
+}

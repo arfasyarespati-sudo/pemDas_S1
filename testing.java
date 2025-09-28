@@ -1,46 +1,49 @@
 import java.util.Scanner;
 
-public class testing { // public class = dapat diakses kelas lain bersifat public
-
+public class testing {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        // static = dipanggil tanpa membuat objek, void tidak mengembalikan nilai
-        System.out.println("Selamat pagi"); // output pertama print line
-        System.out.println("Semuanya"); // output kedua print biasa
 
-        String a = "Halo nama aku";
-        String b = "Arfa";
-        String c = "Umur aku";
-        int d = 18;
+        boolean kondisi = true;
+        double hasil = 0;
 
-        System.out.println(a + " " + b + " " + c + " " + d);
-        int x = 1, y = 2, z = 3;
-        System.out.print("Enam" + " " + "=" + " " + (x + y + z));
+        while (kondisi) {
+            int operator = input.nextInt();
 
-        System.out.println(" ");
-        System.out.println(" ");
-
-        // Student data
-        String studentName = "John Doe";
-        int studentID = 15;
-        int studentAge = 23;
-        float studentFee = 75.25f;
-        char studentGrade = 'B';
-
-        // Print variables
-        System.out.println("Student name : " + studentName);
-        System.out.println("Student id   : " + studentID);
-        System.out.println("Student age  : " + studentAge);
-        System.out.println("Student fee  : " + studentFee);
-        System.out.println("Student grade: " + studentGrade);
-
-        int i = 11;
-        while (i <= 188) {
-            if (i % 2 != 0) {
-                System.out.println(i);
+            if (operator == 0) {
+                System.out.println("Hasil akhir: " + hasil);
+                System.out.println("Kalkulator dimatikan");
+                kondisi = false;
             }
-            i++;
-        }
-    }
 
+            else if (operator > 4) {
+                System.out.println("Opsi tidak ditemukan");
+                continue;
+            }
+
+            else if (operator < 0) {
+                System.out.println("Opsi tidak ditemukan");
+                continue;
+            }
+
+            else {
+                double hasil2 = input.nextDouble();
+                if (operator == 1) {
+                    hasil = hasil + hasil2;
+                } else if (operator == 2) {
+                    hasil = hasil - hasil2;
+                } else if (operator == 3) {
+                    hasil = hasil * hasil2;
+                } else if (operator == 4) {
+                    if (hasil2 == 0) {
+                        continue;
+                    }
+                    hasil = hasil / hasil2;
+                }
+            }
+
+        }
+
+        input.close();
+    }
 }
