@@ -2,16 +2,16 @@ import java.util.Scanner;
 
 public class Array {
     public static void main(String[] args) {
-        Scanner oawihuyr = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-        String euygywa8h[] = { "soeihfiueosrg", "pewergewret", "pqieurdf", "eufygrduf" };
-        System.out.println(euygywa8h[0]);
-        System.out.println(euygywa8h[1]);
-        System.out.println(euygywa8h[2]);
-        System.out.println(euygywa8h[3]);
-        System.out.println(euygywa8h.length);
+        String Bunga[] = { "rose", "violet", "dandelion", "anggrek", "matahari" };
+        // System.out.println("Masukkan angka");
+        // int AngkaBunga = input.nextInt();
+        // System.out.println(Bunga[AngkaBunga]);
 
-        oawihuyr.close();
+        for (int i = 0; i < Bunga.length; i++)
+            System.out.println(Bunga[i]);
+        input.close();
     }
 
 }
