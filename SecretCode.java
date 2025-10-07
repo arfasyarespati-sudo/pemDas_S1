@@ -1,20 +1,40 @@
+
 import java.util.Scanner;
 
 public class SecretCode {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("input id ");
-        int id = input.nextInt(); 
-        int n = input.nextInt(); //length
-        
-        int arr[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26}
-        //0 = " "
+        int id = input.nextInt();
+        int n = input.nextInt(); // length
+        int[] arr = new int[n];
 
-        for (i = 0; n < arr.length; i++)
-        System.out.println(i);
-        
-        
-        
+        for (int i = 0; i < n; i++) {
+            arr[i] = input.nextInt();
+        }
+
+        StringBuilder pesan = new StringBuilder();
+        StringBuilder salah = new StringBuilder();
+        for (int i = 0; i < n; i++) {
+            int numba = arr[i];
+
+            if (numba >= id && numba <= id + 25) {
+                char huruf = (char) ('A' + (numba - id));
+                pesan.append(huruf);
+
+            } else if (numba == id + 26) {
+                pesan.append(" ");
+
+            } else {
+                salah.append(numba).append(", ");
+            }
+        }
+
+        System.out.println(pesan.toString());
+        if (salah.length() > 0) {
+            System.out.println("Elemen tidak valid ditemukan: " + salah.toString().trim());
+        }
+
         input.close();
     }
 
