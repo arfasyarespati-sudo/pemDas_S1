@@ -1,2 +1,1 @@
-# To-ML-AI-Engineer
-Progress pythonzz..
+belajar iseng-iseng dan kumpulan tugas :)
