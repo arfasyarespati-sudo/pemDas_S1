@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PadangMethods {
+public class PadangMethod {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
