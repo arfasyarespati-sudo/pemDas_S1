@@ -30,7 +30,7 @@ public class Methods {
         int b = input.nextInt();
 
         Pertambahan(a, b);
-
+        input.close();
     }
 
     public static void HBD() {
