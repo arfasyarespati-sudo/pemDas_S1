@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Methods {
     public static void main(String[] args) {
+<<<<<<< HEAD
         Scanner input = new Scanner(System.in);
 
         /*
@@ -46,4 +47,24 @@ public class Methods {
         System.out.println(c);
 
     }
+=======
+        Scanner in = new Scanner(System.in);
+
+        int a = in.nextInt();
+        int b = in.nextInt();
+        String angka = ("Selamat pagi!!");
+
+        method(a, b, angka);
+
+        in.close();
+    }
+
+    public static void method(int a, int b, String angka) {
+        int c = a * b;
+        System.out.println(c);
+        System.out.println(angka);
+
+    }
+
+>>>>>>> b8fcc9cb7b862f4e96b7dcbae66cab0b428a24bb
 }
