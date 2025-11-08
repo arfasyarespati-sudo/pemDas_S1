@@ -16,19 +16,17 @@ public class Buku {
         if (this.tersedia) {
             this.tersedia = false;
             System.out.println("Buku diambil " + this.judul);
-        } else {
+        } else
             System.out.println("Buku ini tidak tersedia..");
 
-        }
     }
 
     public void kembalikan() {
         if (this.tersedia == false) {
             this.tersedia = true;
             System.out.println("Buku dikembalikan..");
-        } else {
+        } else
             System.out.println("Buku ada di rak perpustakaan..");
-        }
 
     }
 
@@ -41,4 +39,5 @@ public class Buku {
     public String getJudul() {
         return this.judul;
     }
+
 }
