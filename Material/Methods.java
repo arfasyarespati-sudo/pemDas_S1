@@ -2,7 +2,7 @@ package Material;
 
 import java.util.Scanner;
 
-public class Method {
+public class Methods {
     static Scanner input = new Scanner(System.in);
 
     static void nama(String name) {
