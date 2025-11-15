@@ -5,35 +5,72 @@ import java.util.Scanner;
 public class Method {
     static Scanner input = new Scanner(System.in);
 
-    static void umur() {
-        int age = input.nextInt();
-        if (age >= 18) {
-            System.out.println("Kamu sudah dewasa..");
-        } else if (age < 18 && age >= 12) {
-            System.out.println("Kamu sudah remaja");
-        } else if (age < 12 && age >= 5) {
-            System.out.println("Kamu belum remaja");
-        } else if (age < 5) {
-            System.out.println("kamu balita");
-        } else
-            System.out.println("lu ap jir");
+    static void nama(String name) {
+        System.out.println("Halo nama saya " + name);
+    }
+
+    static void umur(int age) {
+        System.out.println("Umur saya adalah " + age);
+    }
+
+    static void asal(String domicile) {
+        System.out.println("Saya asal dari " + domicile);
     }
 
     static void p() {
-        System.out.println("");
+        System.out.println();
     }
 
-    static void ask() {
-        System.out.println("Berapa umurnya: ");
+    static int tambah(int x, int y) {
+        return x + y;
+    }
+
+    static int perkalian(int x, int y) {
+        return x * y;
+    }
+
+    static int doubles(int x) {
+        return x * 2;
+    }
+
+    static int accum(int x) {
+        if (x > 0) {
+            return x + accum(x - 1);
+        } else {
+            return 0;
+        }
+    }
+
+    static int fak(int x) {
+        if (x > 0) {
+            return x * fak(x - 1);
+        } else {
+            return 1;
+        }
+    }
+
+    static void countdown(int x) {
+
+        if (x > 0) {
+            System.out.print(x + " ");
+            countdown(x - 1);
+        }
     }
 
     public static void main(String[] args) {
-        ask();
-        umur();
+        nama("Arfa");
+        umur(18);
+        asal("Jakarta");
         p();
-        ask();
-        umur();
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(doubles(i));
+        }
         p();
+        System.out.println(accum(10));
+        System.out.println(fak(0));
+
+        p();
+        countdown(5);
 
     }
 }
