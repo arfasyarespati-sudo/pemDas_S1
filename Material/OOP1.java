@@ -25,4 +25,5 @@ public class OOP1 extends OOP {
         System.out.println("3 Points Scored!");
 
     }
+
 }
