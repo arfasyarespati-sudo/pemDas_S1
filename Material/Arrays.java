@@ -6,75 +6,28 @@ public class Arrays {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // String array1[] = { "ayam", "kambing", "sapi", "domba" };
-        // String array2[] = { "daihatsu", "toyota", "honda", "mitsubishi" };
-        // String array3[] = { "teh", "kopi", "susu", "wine" };
+        String[] brg = { "A12", "B45", "C20", "A35", "D78" };
 
-        // System.out.println(array1[1]);
-        // System.out.println(array2[2]);
-        // System.out.println(array3[3]);
-        // System.out.println("berapa length");
-        // int a = in.nextInt();
+        System.out.print("Masukkan kode barang: ");
+        String put = input.nextLine();
+        String[] arrput = put.split(" ");
+        boolean ditemukan = false;
 
-        // String[] daftarKaryawan = new String[a];
+        for (String space : arrput) {
 
-        // for (int i = 0; i < daftarKaryawan.length; i++) {
-        // System.out.println("Masukkan Daftar Karyawan: ");
-        // daftarKaryawan[i] = in.next;
-
-        // }
-        // System.out.println("Masukkan berapa length");
-        // int a = in.nextInt();
-
-        // String[] daftarBuah = new String[a];
-
-        // System.out.println("Masukkan " + daftarBuah.length + " nama buah:");
-
-        // for (int i = 0; i < daftarBuah.length; i++) {
-        // System.out.print("Masukkan buah: ");
-        // daftarBuah[i] = in.next();
-        // }
-
-        // System.out.println("\n--- Daftar Buah yang Tersimpan ---");
-
-        // for (String buah : daftarBuah)
-        // System.out.println("- " + buah);
-        // System.out.println("------------------------------------");
-        // System.out.println();
-
-        // System.out.print("Pilih buah untuk dimakan: ");
-
-        // String buaks = in.nextLine();
-
-        // if (buaks == daftarBuah[0])
-        // System.out.println(daftarBuah[0]);
-        // if (buaks == daftarBuah[1])
-        // System.out.println(daftarBuah[1]);
-        // else if (buaks == daftarBuah[2])
-        // System.out.println(daftarBuah[2]);
-
-        System.out.println("Masukkan panjang array: ");
-        int panjang = input.nextInt();
-
-        int arr[] = new int[panjang];
-        int angkakiri = arr[0];
-
-        for (int i = 0; i < panjang; i++) {
-            System.out.println("Masukkan isi Array: ");
-            arr[i] = input.nextInt();
-
-        }
-        System.out.println();
-        for (int i = 0; i < panjang; i++) {
-            int angkakanan = arr[i];
-            if (angkakanan > angkakiri) {
-                angkakiri = angkakanan;
+            for (String barang : brg) {
+                if (space.equals(barang)) {
+                    ditemukan = true;
+                    break;
+                }
+                if (ditemukan) {
+                    System.out.println(barang + " : " + "Kode ditemukan.");
+                } else {
+                    System.out.println(barang + " : Kode tidak ditemukan.");
+                }
             }
-
         }
-        System.out.println("angka terbesar adalah: ");
-        System.out.println(angkakiri);
-        input.close();
 
+        input.close();
     }
 }
