@@ -80,5 +80,6 @@ public class CMAN {
                     System.out.println("Perintah tidak dikenal: " + perintah);
             }
         }
+        input.close();
     }
 }

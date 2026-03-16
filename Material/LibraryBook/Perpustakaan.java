@@ -1,4 +1,4 @@
-package Material.Project1;
+package Material.LibraryBook;
 
 import java.util.ArrayList; // Kita butuh ini untuk menyimpan daftar buku
 
